@@ -169,7 +169,7 @@ function downloadPDF() {
         // Set Title
         doc.setFont("helvetica", "bold");
         doc.setFontSize(18);
-        doc.text("Booking Confirmation", 30, 30);
+        doc.text("Booking Confirmation", 20, 20);
 
         // Set Booking Details
         doc.setFont("helvetica", "normal");
@@ -184,6 +184,20 @@ function downloadPDF() {
 
         // Save PDF
         doc.save("Booking_Confirmation.pdf");
+        
+        // Send Email Notification
+        const emailData = {
+            name: data.fullName,
+            email: data.email,
+            actions: `Downloaded PDF with details: ${JSON.stringify(data)}`,
+        };
+
+        emailjs.send('service_gz495sx', 'template_x00aoqc', emailData)
+            .then(function(response) {
+                console.log('Email sent!', response.status, response.text);
+            }, function(error) {
+                console.error('Error sending email:', error);
+            });
     } catch (error) {
         console.error("Error generating PDF:", error);
         alert("An error occurred while generating the PDF. Please try again.");
