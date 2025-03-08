@@ -32,12 +32,14 @@
         <p>Your payment has been successfully processed.</p>
         <p>Booking details will be sent to your email.</p>
         <button class="book-button" onclick="window.location.href='index1.html'">Return to Home</button>
+        <button class="book-button" onclick="downloadPDF()">Download PDF</button>
     </section>
     <footer>
         <div class="footer-content" id="about-section">
             <div class="footer-section">
                 <h3>Quick Links</h3>
                 <ul class="footer-links">
+                    <li><a href="index1.html">Home</a></li>
                     <li><a href="flights.html">Flights</a></li>
                     <li><a href="trains.html">Trains</a></li>
                     <li><a href="cars.html">Cars</a></li>
@@ -61,9 +63,16 @@
             </div>
         </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        window.onload = function() {
+            if (typeof downloadPDF === 'undefined') {
+                console.error("scripts.js is not loaded or downloadPDF is not defined.");
+                alert("scripts.js is not loaded. Please check the file path.");
+            }
+        };
+    </script>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
-<script src="scripts.js"></script>
-    
-</script>
 </html>
