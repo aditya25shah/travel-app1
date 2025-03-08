@@ -146,3 +146,46 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+function downloadPDF() {
+    const storedData = sessionStorage.getItem('confirmationData');
+
+    if (!storedData) {
+        alert("No booking data available to generate PDF.");
+        return;
+    }
+
+    try {
+        const data = JSON.parse(storedData);
+        console.log("Generating PDF with:", data);
+
+        // Ensure jsPDF is loaded
+        if (!window.jspdf) {
+            throw new Error("jsPDF library not loaded.");
+        }
+
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF();
+
+        // Set Title
+        doc.setFont("helvetica", "bold");
+        doc.setFontSize(18);
+        doc.text("Booking Confirmation", 30, 30);
+
+        // Set Booking Details
+        doc.setFont("helvetica", "normal");
+        doc.setFontSize(12);
+        doc.text(`Type: ${data.type}`, 20, 40);
+        doc.text(`Item: ${data.name}`, 20, 50);
+        doc.text(`Price: ₹${data.price}`, 20, 60);
+        doc.text(`Duration: ${data.duration} days`, 20, 70);
+        doc.text(`Booked by: ${data.fullName}`, 20, 80);
+        doc.text(`Email: ${data.email}`, 20, 90);
+        doc.text(`Phone: ${data.phone}`, 20, 100);
+
+        // Save PDF
+        doc.save("Booking_Confirmation.pdf");
+    } catch (error) {
+        console.error("Error generating PDF:", error);
+        alert("An error occurred while generating the PDF. Please try again.");
+    }
+}
