@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    const restrictedLinks = ['flights-link','trains-link', 'cars-link', 'hotels-link', 'about-link'];
+    const restrictedLinks = ['flights-link','flights-link', 'cars-link', 'hotels-link', 'about-link'];
     const modal = document.getElementById('login-modal');
     const closeModal = document.getElementById('close-modal');
 
