@@ -202,4 +202,5 @@ function downloadPDF() {
         console.error("Error generating PDF:", error);
         alert("An error occurred while generating the PDF. Please try again.");
     }
+    window.location.href="index1.html";
 }
