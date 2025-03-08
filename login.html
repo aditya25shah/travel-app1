@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghumo.com</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="https://www.freepngimg.com/thumb/logo/70063-logo-travel-design-free-hq-image.png">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="https://www.freepngimg.com/thumb/logo/70063-logo-travel-design-free-hq-image.png" alt="Ghumo Logo">
+                <h1 class="logo-text">&nbsp;Ghumo<span class="dot-com">.com</span></h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" id="flights-link">Flights</a></li>
+                <li><a href="#" id="cars-link">Cars</a></li>
+                <li><a href="#" id="hotels-link">Hotels</a></li>
+                <li><a href="#" id="about-link">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="portal-container">
+        <div class="auth-wrapper">
+            <div class="auth-inner">
+                <div class="form-toggle">
+                    <button class="toggle-btn active" id="login-toggle" >Login</button>
+                    <button class="toggle-btn" id="signup-toggle">Sign Up</button>
+                </div>
+
+                <form class="auth-form active" id="login-form">
+                    <div class="input-group">
+                        <i class="fas fa-user-astronaut"></i>
+                        <input type="name" placeholder="Username" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="Password" required>
+                    </div>
+                    <button type="submit" class="submit-btn" >Login</button>
+                </form>
+
+                <form class="auth-form" id="signup-form">
+                    <div class="input-group">
+                        <i class="fas fa-user-astronaut"></i>
+                        <input type="text" placeholder="Full Name" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" placeholder="Email" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="Password" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="Confirm Password" required>
+                    </div>
+                    <button type="submit" class="submit-btn"onclick="redirect(event)">Signup</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <section id="about-section">
+        </section>
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>Contact Us</h3>
+            <p>Aditya Shah</p>
+            <p>Email: aditya546shah@gmail.com</p>
+            <p>Phone: +91 1234567809</p> 
+          </div>
+          <div class="footer-section">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="#" class="acebook" aria-label="Visit our Facebook page">
+                <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://x.com/AdityaShah28037?t=2nJsjvBuqRK7vutx7a3JQQ&s=08" class="titter" aria-label="Visit our Twitter profile">
+                <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com/_aditya_pixels_?igsh=emp6Zm0zODZ5eGdu" class="istagram" aria-label="Visit our Instagram profile">
+                <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/aditya-shah-8bb76532a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="inkedin" aria-label="Visit our LinkedIn page">
+                <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    <div class="modal" id="login-modal">
+        <div class="modal-content">
+            <h2>Sign In Required</h2>
+            <p>Please sign in to access this feature.</p>
+            <button id="close-modal">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js">
+    </script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotels - Ghumo.com</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="https://www.freepngimg.com/thumb/logo/70063-logo-travel-design-free-hq-image.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="https://www.freepngimg.com/thumb/logo/70063-logo-travel-design-free-hq-image.png" class="logo12" alt="Ghumo Logo">
+                <h1 class="logo-text">&nbsp;Ghumo<span class="dot-com">.com</span></h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index1.html">Home</a></li>
+                <li><a href="flights.html">Flights</a></li>
+                <li><a href="trains.html">Trains</a></li>
+                <li><a href="cars.html">Cars</a></li>
+                <li><a href="hotels.html" class="active">Hotels</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero" style="background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')">
+        <div class="hero-content">
+            <h1 class="front-pic">Book Hotels Across India</h1>
+            <div class="search-box">
+                <form class="search-form">
+                    <input type="text" placeholder="City or Hotel Name" required>
+                    <input type="date" placeholder="Check-In Date" required>
+                    <input type="date" placeholder="Check-Out Date" required>
+                    <select>
+                        <option>1 Room</option>
+                        <option>2 Rooms</option>
+                        <option>3 Rooms</option>
+                        <option>4 Rooms</option>
+                        <option>5 Rooms</option>
+                    </select>
+                    <select>
+                        <option>1 Guest</option>
+                        <option>2 Guests</option>
+                        <option>3 Guests</option>
+                        <option>4 Guests</option>
+                        <option>5 Guests</option>
+                    </select>
+                    <button type="submit">Search Hotels <i class="fas fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section class="card-grid">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Luxury Hotel">
+            <div class="card-content">
+                <h3><b>Luxury Hotel</b></h3>
+                <p>Experience world-class comfort.</p>
+                <div class="train-details">
+                    <p>Starting from ₹5,999/night</p>
+                </div>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <button class="book-btn" onclick="redirectToBooking()">Book Now</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Budget Hotel">
+            <div class="card-content">
+                <h3><b>Budget Hotel</b></h3>
+                <p>Affordable stays with great service.</p>
+                <div class="train-details">
+                    <p>Starting from ₹1,499/night</p>
+                </div>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <button class="book-btn" onclick="redirectToBooking()">Book Now</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1568084680786-a84f91d1153c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Resort">
+            <div class="card-content">
+                <h3><b>Resort</b></h3>
+                <p>Relax and unwind in a serene environment.</p>
+                <div class="train-details">
+                    <p>Starting from ₹7,999/night</p>
+                </div>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <button class="book-btn" onclick="redirectToBooking()">Book Now</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Boutique Hotel">
+            <div class="card-content">
+                <h3><b>Boutique Hotel</b></h3>
+                <p>Unique and stylish accommodations.</p>
+                <div class="train-details">
+                    <p>Starting from ₹3,999/night</p>
+                </div>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <button class="book-btn" onclick="redirectToBooking()">Book Now</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1561501900-3701fa6a0864?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Beach Resort">
+            <div class="card-content">
+                <h3><b>Beach Resort</b></h3>
+                <p>Enjoy the sun, sand, and sea.</p>
+                <div class="train-details">
+                    <p>Starting from ₹8,999/night</p>
+                </div>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <button class="book-btn" onclick="redirectToBooking()">Book Now</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt="Mountain Lodge">
+            <div class="card-content">
+                <h3><b>Mountain Lodge</b></h3>
+                <p>Perfect for nature lovers and adventurers.</p>
+                <div class="train-details">
+                    <p>Starting from ₹6,499/night</p>
+                </div>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <button class="book-btn" onclick="redirectToBooking()">Book Now</button>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-content" id="about-section">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="flights.html">Flights</a></li>
+                    <li><a href="trains.html">Trains</a></li>
+                    <li><a href="cars.html">Cars</a></li>
+                    <li><a href="hotels.html">Hotels</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Aditya Shah</p>
+                <p>Email: aditya546shah@gmail.com</p>
+                <p>Phone: +91 9942673363</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="modal" id="login-modal">
+        <div class="modal-content">
+            <h2>Sign In Required</h2>
+            <p>Please sign in to book hotels.</p>
+            <button id="close-modal">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

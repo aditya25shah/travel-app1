@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghumo.com</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="https://www.freepngimg.com/thumb/logo/70063-logo-travel-design-free-hq-image.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="https://www.freepngimg.com/thumb/logo/70063-logo-travel-design-free-hq-image.png" class="logo12" alt="Ghumo Logo">
+                <h1 class="logo-text">&nbsp;Ghumo<span class="dot-com">.com</span></h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="flights.html">Flights</a></li>
+                <li><a href="trains.html" class="active">Trains</a></li>
+                <li><a href="cars.html">Cars</a></li>
+                <li><a href="hotels.html">Hotels</a></li>
+                <li><a href="#about-section">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero" style="background-image: url('https://images8.alphacoders.com/891/thumb-1920-891479.jpg')">
+        <div class="hero-content">
+            <h1 class="front-pic">Book Trains Across India</h1>
+            <div class="search-box">
+                <form class="search-form">
+                    <input type="text" placeholder="From Station" required>
+                    <input type="text" placeholder="To Station" required>
+                    <input type="date" placeholder="Departure Date" required>
+                    <select>
+                        <option>1 Adult</option>
+                        <option>2 Adults</option>
+                        <option>3 Adults</option>
+                        <option>4 Adults</option>
+                        <option>5 Adults</option>
+
+                    </select>
+                    <select>
+                        <option>1 Children</option>
+                        <option>2 Children</option>
+                        <option>3 Children</option>
+                        <option>4 Children</option>
+                        <option>5 Children</option>
+
+                    </select>
+                    <button type="submit">Search Trains <i class="fas fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section class="card-grid">
+        <div class="card">
+            <img src="https://www.oneindia.com/img/1200x80/2019/03/rajdhani-express-1551521307.jpg" alt="Rajdhani Express">
+            <div class="card-content">
+                <h3><b>Rajdhani Express</b></h3>
+                <p>Mumbai → Delhi</p>
+                <div class="train-details">
+                    <p>Departure: 17:30 | Arrival: 08:15</p>
+                    <p>Starting from ₹1,999</p>
+                </div>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <button class="book-btn" onclick="redirectToBooking()">Book Now</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://th.bing.com/th/id/OIP.B5rSpeT1j5_jExU1HyUxcwHaEK?rs=1&pid=ImgDetMain" alt="Shatabdi Express">
+            <div class="card-content">
+                <h3><b>Shatabdi Express</b></h3>
+                <p>Delhi → Chandigarh</p>
+                <div class="train-details">
+                    <p>Departure: 06:00 | Arrival: 11:30</p>
+                    <p>Starting from ₹899</p>
+                </div>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <button class="book-btn" onclick="redirectToBooking()">Book Now</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://i.ytimg.com/vi/ohpjqZSHhpE/maxresdefault_live.jpg" alt="Rajdhani Express">
+            <div class="card-content">
+                <h3><b>Vivek Express</b></h3>
+                <p>Dibrugarh → Kanyakumari</p>
+                <div class="train-details">
+                    <p>Departure: 23:00 | Arrival: 06:40</p>
+                    <p>Starting from ₹2,499</p>
+                </div>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <button class="book-btn" onclick="redirectToBooking()">Book Now</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://th.bing.com/th/id/OIP.WloKtCrGMNsz4oLtQIRWdwHaEp?rs=1&pid=ImgDetMain" alt="Shatabdi Express">
+            <div class="card-content">
+                <h3><b>Himsagar Express</b></h3>
+                <p>Kashmir → Kanyakumari</p>
+                <div class="train-details">
+                    <p>Departure: 22:00 | Arrival: 12:30</p>
+                    <p>Starting from ₹2,999</p>
+                </div>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <button class="book-btn" onclick="redirectToBooking()">Book Now</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://im.indiatimes.in/facebook/2017/Aug/darjeeling-himalaya-railway_1502017250_1502017264.jpg" alt="Shatabdi Express">
+            <div class="card-content">
+                <h3><b>Darjeeling Himalayan Railway</b></h3>
+                <p>New Jalpaiguru → Darjeeling</p>
+                <div class="train-details">
+                    <p>Departure: 08:00 | Arrival: 11:30</p>
+                    <p>Starting from ₹1,899</p>
+                </div>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <button class="book-btn" onclick="redirectToBooking()">Book Now</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://storage.ning.com/topology/rest/1.0/file/get/9008633499?profile=original" alt="Shatabdi Express">
+            <div class="card-content">
+                <h3><b>Palace on Wheels</b></h3>
+                <p>Delhi → Jodhpur</p>
+                <div class="train-details">
+                    <p>Departure: 09:00 | Arrival: 21:30</p>
+                    <p>Starting from ₹108,899</p>
+                </div>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <button class="book-btn" onclick="redirectToBooking()">Book Now</button>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-content" id="about-section">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="flights.html">Flights</a></li>
+                    <li><a href="trains.html">Trains</a></li>
+                    <li><a href="cars.html">Cars</a></li>
+                    <li><a href="hotels.html">Hotels</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Aditya Shah</p>
+                <p>Email: aditya546shah@gmail.com</p>
+                <p>Phone: +91 9942673363</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="modal" id="login-modal">
+        <div class="modal-content">
+            <h2>Sign In Required</h2>
+            <p>Please sign in to book trains.</p>
+            <button id="close-modal">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghumo.com</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="https://www.freepngimg.com/thumb/logo/70063-logo-travel-design-free-hq-image.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="https://www.freepngimg.com/thumb/logo/70063-logo-travel-design-free-hq-image.png" class="logo12" alt="Ghumo Logo">
+                <h1 class="logo-text">&nbsp;Ghumo<span class="dot-com">.com</span></h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="flights.html">Flights</a></li>
+                <li><a href="trains.html">Trains</a></li>
+                <li><a href="cars.html" class="active">Cars</a></li>
+                <li><a href="hotels.html">Hotels</a></li>
+                <li><a href="#about-section">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero" style="background-image: url('https://wallpapercave.com/wp/wp3788775.jpg')">
+        <div class="hero-content">
+            <h1 class="front-pic">Rent Cars Across India</h1>
+            <div class="search-box">
+                <form class="search-form">
+                    <input type="text" placeholder="Pickup Location" required>
+                    <input type="text" placeholder="Drop Location" required>
+                    <input type="date" placeholder="Pickup Date" required>
+                    <input type="time" placeholder="Pickup Time" required>
+                    <button type="submit">Search Cars <i class="fas fa-search"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section class="card-grid">
+        <div class="card">
+            <img src="https://th.bing.com/th/id/R.6347908e8a146d45484bd9a6db23769e?rik=c%2bz6f43kYO2GKQ&riu=http%3a%2f%2fwww.ondrive.in%2fwp-content%2fuploads%2fAlturas-G4-by-Mahindra-Studio-Picture-02.jpg&ehk=duG2xS7cVy9fYUddMmYMlNpWPXxNQa8%2bZKV5XbggOCk%3d&risl=&pid=ImgRaw&r=0" alt="SUV Car">
+            <div class="card-content">
+                <h3><b>SUV Car</b></h3>
+                <p>Spacious and comfortable for family trips.</p>
+                <div class="train-details">
+                    <p>Starting from ₹1,999/day</p>
+                </div>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <button class="book-btn" onclick="redirectToBooking()" >Book Now</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://th.bing.com/th/id/R.922da05285599711a6c4356a9401ffde?rik=AINJ4RazscSQdQ&riu=http%3a%2f%2fautonexa.com%2fwp-content%2fuploads%2f2018%2f02%2ft4-1024x512.jpg&ehk=uZEZYZ3UskAAyLxtGZuAjgR99%2ffe%2fWc3I%2bL9aHqsn2M%3d&risl=&pid=ImgRaw&r=0" alt="Sedan Car">
+            <div class="card-content">
+                <h3><b>Sedan Car</b></h3>
+                <p>Elegant and fuel-efficient for city drives.</p>
+                <div class="train-details">
+                    <p>Starting from ₹899/day</p>
+                </div>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <button class="book-btn" onclick="redirectToBooking()">Book Now</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://th.bing.com/th/id/OIP.XhMW2H0nADZfjwRY_67e-AHaFj?rs=1&pid=ImgDetMain" alt="Luxury Car">
+            <div class="card-content">
+                <h3><b>Luxury Car</b></h3>
+                <p>Experience luxury and style like never before.</p>
+                <div class="train-details">
+                    <p>Starting from ₹4,999/day</p>
+                </div>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <button class="book-btn" onclick="redirectToBooking()">Book Now</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://d2m3nfprmhqjvd.cloudfront.net/blog/20220228144044/ezgif.com-gif-maker-2022-01-11T133747.076-1160x653.jpg" alt="Sports Car">
+            <div class="card-content">
+                <h3><b>Sports Car</b></h3>
+                <p>Feel the thrill of speed and performance.</p>
+                <div class="train-details">
+                    <p>Starting from ₹6,999/day</p>
+                </div>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <button class="book-btn" onclick="redirectToBooking()">Book Now</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://sm.mashable.com/mashable_in/seo/default/tata-launches-compact-suv-nexon-ev-in-india_y5q4.jpg" alt="Compact Car">
+            <div class="card-content">
+                <h3><b>Compact Car</b></h3>
+                <p>Perfect for short trips and city commutes.</p>
+                <div class="train-details">
+                    <p>Starting from ₹699/day</p>
+                </div>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <button class="book-btn" onclick="redirectToBooking()">Book Now</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://5.imimg.com/data5/KP/KB/YD/GLADMIN-107783/tata-magic-express-van.jpg" alt="Van">
+            <div class="card-content">
+                <h3><b>Van</b></h3>
+                <p>Ideal for group travel and large families.</p>
+                <div class="train-details">
+                    <p>Starting from ₹2,499/day</p>
+                </div>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <button class="book-btn" onclick="redirectToBooking()">Book Now</button>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-content" id="about-section">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="flights.html">Flights</a></li>
+                    <li><a href="trains.html">Trains</a></li>
+                    <li><a href="cars.html">Cars</a></li>
+                    <li><a href="hotels.html">Hotels</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Aditya Shah</p>
+                <p>Email: aditya546shah@gmail.com</p>
+                <p>Phone: +91 9942673363</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="modal" id="login-modal">
+        <div class="modal-content">
+            <h2>Sign In Required</h2>
+            <p>Please sign in to book cars.</p>
+            <button id="close-modal">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
