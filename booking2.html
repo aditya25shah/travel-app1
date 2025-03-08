@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghumo.com</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="https://www.freepngimg.com/thumb/logo/70063-logo-travel-design-free-hq-image.png" alt="Ghumo Logo">
+                <h1 class="logo-text">Ghumo<span class="dot-com">.com</span></h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index1.html">Home</a></li>
+                <li><a href="flights.html">Flights</a></li>
+                <li><a href="trains.html">Trains</a></li>
+                <li><a href="cars.html">Cars</a></li>
+                <li><a href="hotels.html">Hotels</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="booking-section">
+        <h1 class="heading1">Complete Your Booking</h1>
+        <div class="booking-form">
+            <form id="booking-form">
+                <h2>Personal Details</h2>
+                <div class="form-group">
+                    <label for="full-name">Full Name</label>
+                    <input type="text" id="full-name" name="full-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="duration">Duration (in days)</label>
+                    <select id="duration" name="duration" required>
+                        <option value="1">1 Day</option>
+                        <option value="2">2 Days</option>
+                        <option value="3">3 Days</option>
+                        <option value="4">4 Days</option>
+                        <option value="5">5 Days</option>
+                        <option value="7">1 Week</option>
+                        <option value="14">2 Weeks</option>
+                        <option value="30">1 Month</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="multiplier">Number of People</label>
+                    <input type="number" id="multiplier" name="multiplier" min="1" required>
+                </div>
+                <button type="submit" class="book-btn">Confirm Booking</button>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="flights.html">Flights</a></li>
+                    <li><a href="trains.html">Trains</a></li>
+                    <li><a href="cars.html">Cars</a></li>
+                    <li><a href="hotels.html">Hotels</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Aditya Shah</p>
+                <p>Email: aditya546shah@gmail.com</p>
+                <p>Phone: +91 9942673363</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const bookingForm = document.getElementById('booking-form');
+            if (bookingForm) {
+                bookingForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const fullName = document.getElementById('full-name').value;
+                    const email = document.getElementById('email').value;
+                    const phone = document.getElementById('phone').value;
+                    const duration = parseInt(document.getElementById('duration').value);
+                    const multiplier = parseInt(document.getElementById('multiplier').value);
+                    const urlParams = new URLSearchParams(window.location.search);
+                    const basePrice = parseFloat(urlParams.get('price')) || 0; // Base price per day
+                    const totalPrice = basePrice * duration * multiplier;
+
+                    // Combine all data
+                    const confirmationData = {
+                        type: urlParams.get('type') || 'Not specified',
+                        name: urlParams.get('name') || 'Not specified',
+                        price: totalPrice.toFixed(2), 
+                        fullName,
+                        email,
+                        phone,
+                        duration,
+                        multiplier,
+                    };
+                    sessionStorage.setItem('confirmationData', JSON.stringify(confirmationData));
+                    window.location.href = 'confirmation2.html';
+                });
+            }
+        });
+    </script>
+</body>
+</html>
