@@ -27,42 +27,39 @@ header {
 nav {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 10px 20px;
+  margin-left:10px;
   display: flex;
+  font-size: 18px;
   justify-content: space-between;
   align-items: center;
 }
 
-.logo-text {
-  color: white;
+.logo-text{
+  color:white;
   font-size: 35px;
-  margin-top: 13px;
+  margin-top:13px;
 }
-
-.dot-com {
-  color: #0071c2;
+.dot-com{
+  color:#0071c2;
 }
-
 .logo {
-  margin-top: 7px;
-  height: 90px;
-  width: 90px;
-  margin-left: 20px;
-  display: flex;
+  margin-top:7px;
+  height:90px;
+  width:90px;
+  margin-left:20px;
+  display:flex;
   font-size: 2rem;
 }
 
 .logo img {
   height: 70px;
 }
-
 .nav-links {
-  margin-right: -220px;
+  margin-right:-220px;
   display: flex;
   gap: 2.5rem;
   list-style: none;
 }
-
 .nav-links a {
   color: white;
   text-decoration: none;
@@ -72,7 +69,6 @@ nav {
   padding: 5px 0;
   transition: color 0.3s ease;
 }
-
 .nav-links a::after {
   content: '';
   position: absolute;
@@ -83,7 +79,6 @@ nav {
   background: #ffb700;
   transition: width 0.3s ease-in;
 }
-
 .nav-links a:hover {
   color: #ffb700;
 }
