@@ -1,5 +1,5 @@
 
-body {
+body {  
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
@@ -9,7 +9,6 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
 }
-
 header {
   background: linear-gradient(90deg, #003580, #0071c2);
   color: white;
