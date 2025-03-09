@@ -1,4 +1,4 @@
-/* General Styles */
+
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
@@ -10,7 +10,6 @@ body {
   overflow-x: hidden;
 }
 
-/* Header Styles */
 header {
   background: linear-gradient(90deg, #003580, #0071c2);
   color: white;
@@ -84,7 +83,6 @@ nav {
   width: 100%;
 }
 
-/* Hero Section */
 .hero {
   background-image: url('https://wallpaperaccess.com/full/4754860.jpg');
   background-size: cover;
