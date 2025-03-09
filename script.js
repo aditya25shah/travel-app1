@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const username = document.querySelector('#login-form input[type="name"]').value;
             const password = document.querySelector('#login-form input[type="password"]').value;
 
-            if (username === 'adityashah@gmail.com' && password === '1234') {
+            if (username === 'aditya12shah@gmail.com' && password === '9472') {
                 alert('Login successful!');
                 sessionStorage.setItem("isLoggedIn", "true"); // Store login state
                 window.location.href = "index1.html";
