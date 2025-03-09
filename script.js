@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    const restrictedLinks = ['flights-link','trains-link', 'cars-link', 'hotels-link', 'about-link'];
+   const restrictedLinks = ['flights-link','trains-link', 'cars-link', 'hotels-link', 'about-link','flights-link-footer','trains-link-footer', 'cars-link-footer', 'hotels-link-footer'];
     const modal = document.getElementById('login-modal');
     const closeModal = document.getElementById('close-modal');
 
