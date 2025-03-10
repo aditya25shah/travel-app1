@@ -1,3 +1,4 @@
+// smooth scrolling hai
 document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -11,7 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-
     const loginToggle = document.getElementById('login-toggle');
     const signupToggle = document.getElementById('signup-toggle');
     const loginForm = document.getElementById('login-form');
@@ -27,8 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
-
-   const restrictedLinks = ['flights-link','trains-link', 'cars-link', 'hotels-link', 'about-link','flights-link-footer','trains-link-footer', 'cars-link-footer', 'hotels-link-footer'];
+//resticted links with id (header and footer of the page)
+    const restrictedLinks = ['flights-link','trains-link', 'cars-link', 'hotels-link', 'about-link','flights-link-footer','trains-link-footer', 'cars-link-footer', 'hotels-link-footer'];
     const modal = document.getElementById('login-modal');
     const closeModal = document.getElementById('close-modal');
 
@@ -42,7 +42,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             }
         });
-
         closeModal.addEventListener('click', () => {
             modal.style.display = 'none';
         });
@@ -60,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const username = document.querySelector('#login-form input[type="name"]').value;
             const password = document.querySelector('#login-form input[type="password"]').value;
 
-            if (username === 'aditya12shah@gmail.com' && password === '9472') {
+            if (username === 'adityashah@gmail.com' && password === '1234') {
                 alert('Login successful!');
                 sessionStorage.setItem("isLoggedIn", "true"); // Store login state
                 window.location.href = "index1.html";
@@ -153,43 +152,83 @@ function downloadPDF() {
         alert("No booking data available to generate PDF.");
         return;
     }
-
+    
     try {
         const data = JSON.parse(storedData);
         console.log("Generating PDF with:", data);
-
-        // Ensure jsPDF is loaded
+        const price = parseFloat(data.price);
+        if (isNaN(price)) {
+            console.error("Invalid price:", data.price);
+            data.price = "0.00"; 
+        } else {
+            data.price = price.toFixed(2); // Ensure two decimal places
+        }
         if (!window.jspdf) {
             throw new Error("jsPDF library not loaded.");
         }
-
         const { jsPDF } = window.jspdf;
         const doc = new jsPDF();
-
-        // Set Title
+        const margin = 20;
+        let y = margin; 
+        const logoUrl = "adi.png";
+        doc.addImage(logoUrl, "PNG", margin, y, 30, 30);
+        y += 40;
+        doc.setFont("helvetica", "bold");
+        doc.setFontSize(24);
+        doc.setTextColor(0, 0, 0); 
+        doc.text("Booking Details", margin, y);
+        y += 10;
+        doc.setDrawColor(0, 0, 0); 
+        doc.setLineWidth(0.5);
+        doc.line(margin, y, doc.internal.pageSize.getWidth() - margin, y);
+        y += 10; 
         doc.setFont("helvetica", "bold");
         doc.setFontSize(18);
-        doc.text("Booking Confirmation", 20, 20);
-
-        // Set Booking Details
+        doc.setTextColor(0, 0, 0); 
+        doc.text("Booking Details", margin, y);
+        y += 15; // Move down after the heading
+    
         doc.setFont("helvetica", "normal");
-        doc.setFontSize(12);
-        doc.text(`Type: ${data.type}`, 20, 40);
-        doc.text(`Item: ${data.name}`, 20, 50);
-        doc.text(`Price: ₹${data.price}`, 20, 60);
-        doc.text(`Duration: ${data.duration} days`, 20, 70);
-        doc.text(`Booked by: ${data.fullName}`, 20, 80);
-        doc.text(`Email: ${data.email}`, 20, 90);
-        doc.text(`Phone: ${data.phone}`, 20, 100);
-
-        // Save PDF
-        doc.save("Booking_Confirmation.pdf");
+        doc.setFontSize(14);
+        doc.setTextColor(0, 0, 0); 
+        doc.text(`Type: ${data.type}`, margin, y);
+        y += 10; //  type
+        doc.text(`Item: ${data.name}`, margin, y);
+        y += 10; // item
+        doc.text(`Price: ₹${data.price}`, margin, y);
+        y += 10; // price
+        doc.text(`Duration: ${data.duration} days`, margin, y);
+        y += 20; //  duration
         
+        //Information Section
+        doc.setFont("helvetica", "bold");
+        doc.setFontSize(18);
+        doc.setTextColor(0, 0, 0); 
+        doc.text("User Information", margin, y);
+        y += 15; // heading
+        
+        doc.setFont("helvetica", "normal");
+        doc.setFontSize(14);
+        doc.setTextColor(60, 60, 60);
+        doc.text(`Booked by: ${data.fullName}`, margin, y);
+        y += 10; //name
+        doc.text(`Email: ${data.email}`, margin, y);
+        y += 10; //email
+        doc.text(`Phone: ${data.phone}`, margin, y);
+        y += 20; //phone
+        doc.setFont("helvetica", "italic");
+        doc.setFontSize(12);
+        doc.setTextColor(100, 100, 100); 
+        doc.text("Thank you for choosing Ghumo.com!", margin, y);
+        y += 10; // Move down after the thank-you message
+        doc.text("Contact us at aditya546shah@gmail.com for any queries.", margin, y);
+        // Save PDF
+        doc.save("Booking(Ghumo.com).pdf");     
         // Send Email Notification
         const emailData = {
             name: data.fullName,
             email: data.email,
-            actions: `Downloaded PDF with details: ${JSON.stringify(data)}`,
+            actions: `Booking Done the Details are: ${JSON.stringify(data)}`,
         };
 
         emailjs.send('service_gz495sx', 'template_x00aoqc', emailData)
